@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.light {
+  --bg: #fff;
+  --text: #352833;
+  --headers: #0d1a3d;
+  --hyper: #202f58;
+  --tag: #ff54a7;
+  --tag-text: #fff;
+  --slider: #0d1a3d;
+}
+
+body.dark {
+  --bg: #30374a;
+  --text: rgb(182, 192, 221);
+  --headers: #f4e6ad;
+  --hyper: #ff54a7;
+  --tag: #0d1a3d;
+  --slider: #f4e6ad;
+}

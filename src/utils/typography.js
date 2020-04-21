@@ -3,8 +3,15 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    a: {
+      color: `var(--hyper)`,
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
+    },
+    blockquote: {
+      color: "var(--text)",
+      "border-left": "0.32813rem solid var(--hyper)",
     },
   }
 }

@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article>
-        <header>
+        <header style={{ color: `var(--headers)` }}>
           <h1
             style={{
               marginTop: rhythm(1),
@@ -32,6 +32,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
+              color: `var(--hyper)`,
             }}
           >
             {post.frontmatter.date}
@@ -41,6 +42,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         <hr
           style={{
             marginBottom: rhythm(1),
+            backgroundColor: "var(--hyper)",
           }}
         />
         <footer>
@@ -60,14 +62,22 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link
+                to={previous.fields.slug}
+                rel="prev"
+                style={{ textDecoration: "none" }}
+              >
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link
+                to={next.fields.slug}
+                rel="next"
+                style={{ textDecoration: "none" }}
+              >
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -93,7 +103,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM DD, YYYY", locale: "es")
         description
       }
     }
