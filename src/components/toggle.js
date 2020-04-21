@@ -1,18 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 
 import "./toogle.css"
 
-export const Toggle = ({ checked }) => {
+export const Toggle = props => {
   return (
     <div>
       <label className="switch">
-        <input
-          type="checkbox"
-          onChange={({ target }) => {
-            window.__setPreferedTheme(target.checked ? "dark" : "light")
-          }}
-          checked={window.__theme === "dark"}
-        />
+        <input type="checkbox" {...props} />
         <span className="slider round"></span>
       </label>
     </div>

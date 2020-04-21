@@ -103,7 +103,15 @@ const Layout = ({ location, title, children }) => {
       }}
     >
       <Header>
-        {renderHeader()} <Toggle />
+        {renderHeader()}{" "}
+        {theme !== null && (
+          <Toggle
+            checked={theme === "dark"}
+            onChange={({ target }) => {
+              window.__setPreferedTheme(target.checked ? "dark" : "light")
+            }}
+          />
+        )}
       </Header>
       <main style={{ minHeight: "100vh" }}>{children}</main>
       <footer style={{ display: "flex", justifyContent: "center" }}>
