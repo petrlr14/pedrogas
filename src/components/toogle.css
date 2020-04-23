@@ -14,14 +14,11 @@
   bottom: 0;
   transition: 0.5s;
   border: 3px solid var(--hyper);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  bottom: 14px;
-  top: 8px;
   background-color: var(--slider);
   transition: 0.5s;
 }
@@ -36,12 +33,4 @@ input:checked + .slider:before {
 
 .slider.round {
   border-radius: 35px;
-}
-
-.slider.round:before {
-  width: 43%;
-  height: 43%;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  transform: rotateZ(-90deg);
 }

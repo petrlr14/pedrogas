@@ -6,19 +6,22 @@ body {
 
 body.light {
   --bg: #fff;
+  --bg-darker: rgb(219, 219, 219);
   --text: #352833;
   --headers: #0d1a3d;
   --hyper: #202f58;
   --tag: #ff54a7;
   --tag-text: #fff;
-  --slider: #0d1a3d;
+  --slider: #ffcf0d;
 }
 
 body.dark {
   --bg: #30374a;
+  --bg-darker: #242938;
   --text: rgb(182, 192, 221);
   --headers: #f4e6ad;
   --hyper: #ff54a7;
   --tag: #0d1a3d;
-  --slider: #f4e6ad;
+  --slider: #30374a;
+  --moon: #f4e6ad;
 }
