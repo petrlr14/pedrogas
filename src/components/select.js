@@ -43,6 +43,7 @@ const SelectList = styled.ul`
   border-left: 3px solid var(--hyper);
   border-right: 3px solid var(--hyper);
   background-color: var(--bg);
+  margin: 0;
   & > li {
     list-style: none;
     margin: 0;
@@ -65,7 +66,7 @@ export const Select = ({ changeOrder }) => {
             setIsOpen(!isOpen)
           }}
         >
-          <h4>{isOpen ? "Cambie orden" : options[selectedItem].name}</h4>
+          <h4>{isOpen ? "Orden" : options[selectedItem].name}</h4>
           <i className={`fas fa-caret-${isOpen ? "up" : "down"}`} />
         </SelectHeader>
         <SelectList isOpen={isOpen} role="listbox">
