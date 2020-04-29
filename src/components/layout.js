@@ -3,6 +3,10 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
 import { Toggle } from "./toggle"
+import UIFX from "uifx"
+import sound from "./../sounds/click.wav"
+
+const clickSound = new UIFX(sound)
 
 const socials = [
   { name: "twitter", href: "https://twitter.com/petrlr14", icon: "fa-twitter" },
@@ -108,6 +112,7 @@ const Layout = ({ location, title, children }) => {
           <Toggle
             checked={theme === "dark"}
             onChange={({ target }) => {
+              clickSound.setVolume(0.1).play()
               window.__setPreferedTheme(target.checked ? "dark" : "light")
             }}
           />
