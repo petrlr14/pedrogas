@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import styled from "styled-components"
 import OrderOptions from "./../utils/OrderOptions"
 import { Listbox, ListboxOption, ListboxArrow } from "@reach/listbox"
 import "@reach/listbox/styles.css"

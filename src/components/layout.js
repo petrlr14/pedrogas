@@ -3,11 +3,6 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import { rhythm, scale } from "../utils/typography"
 import { Toggle } from "./toggle"
-import UIFX from "uifx"
-import sound from "./../sounds/click.wav"
-import { SoundOnOff } from "./soundOnOff"
-
-const clickSound = new UIFX(sound)
 
 const socials = [
   { name: "twitter", href: "https://twitter.com/petrlr14", icon: "fa-twitter" },
@@ -37,17 +32,15 @@ const A = styled.a`
 
 const Header = styled.header`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `
 
 const Layout = ({ location, title, children }) => {
   const [theme, setTheme] = useState(null)
-  const [isSoundOn, setSound] = useState(true)
 
   useEffect(() => {
-    setSound(localStorage.getItem("sound") ? true : false)
     setTheme(window.__theme)
     window.__onThemeChange = () => {
       setTheme(window.__theme)
@@ -111,33 +104,12 @@ const Layout = ({ location, title, children }) => {
       <Header>
         {renderHeader()}{" "}
         {theme !== null && (
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "100%",
-              height: "4em",
-              padding: `0 ${rhythm(3 / 4)}`,
+          <Toggle
+            checked={theme === "dark"}
+            onChange={({ target }) => {
+              window.__setPreferedTheme(target.checked ? "dark" : "light")
             }}
-          >
-            <SoundOnOff
-              onClick={() => {
-                setSound(value => {
-                  localStorage.setItem("sound", !value)
-                  return !value
-                })
-              }}
-              className={`fas ${isSoundOn ? "fa-volume-up" : "fa-volume-mute"}`}
-            />
-            <Toggle
-              checked={theme === "dark"}
-              onChange={({ target }) => {
-                isSoundOn && clickSound.setVolume(0.1).play()
-                window.__setPreferedTheme(target.checked ? "dark" : "light")
-              }}
-            />
-          </div>
+          />
         )}
       </Header>
       <main style={{ minHeight: "100vh" }}>{children}</main>

@@ -58,11 +58,11 @@ export const PostPreview = ({ node }) => {
           }}
         />
       </section>
-      {/* <TagContainer>
+      <TagContainer>
         {tags.map((el, index) => {
           return <Tag key={index}>{el}</Tag>
         })}
-      </TagContainer> */}
+      </TagContainer>
     </Preview>
   )
 }

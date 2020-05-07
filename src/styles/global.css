@@ -10,7 +10,7 @@ body.light {
   --text: #581c0c;
   --headers: #ca5116;
   --hyper: #ca5116;
-  --tag: #ff54a7;
+  --tag: #ca5116;
   --tag-text: #fff;
   --slider: #ffcf0d;
 }
@@ -21,7 +21,8 @@ body.dark {
   --text: rgb(182, 192, 221);
   --headers: #ff6363;
   --hyper: #ff6363;
-  --tag: #0d1a3d;
+  --tag: #ff6363;
+  --tag-text: #fff;
   --slider: #202040;
   --moon: #f4e6ad;
 }
