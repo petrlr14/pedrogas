@@ -5,6 +5,7 @@ import { rhythm, scale } from "../utils/typography"
 import { Toggle } from "./toggle"
 import UIFX from "uifx"
 import sound from "./../sounds/click.wav"
+import { SoundOnOff } from "./soundOnOff"
 
 const clickSound = new UIFX(sound)
 
@@ -36,15 +37,17 @@ const A = styled.a`
 
 const Header = styled.header`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 `
 
 const Layout = ({ location, title, children }) => {
   const [theme, setTheme] = useState(null)
+  const [isSoundOn, setSound] = useState(true)
 
   useEffect(() => {
+    setSound(localStorage.getItem("sound") ? true : false)
     setTheme(window.__theme)
     window.__onThemeChange = () => {
       setTheme(window.__theme)
@@ -58,7 +61,6 @@ const Layout = ({ location, title, children }) => {
         <h1
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
         >
@@ -109,13 +111,33 @@ const Layout = ({ location, title, children }) => {
       <Header>
         {renderHeader()}{" "}
         {theme !== null && (
-          <Toggle
-            checked={theme === "dark"}
-            onChange={({ target }) => {
-              clickSound.setVolume(0.1).play()
-              window.__setPreferedTheme(target.checked ? "dark" : "light")
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+              height: "4em",
+              padding: `0 ${rhythm(3 / 4)}`,
             }}
-          />
+          >
+            <SoundOnOff
+              onClick={() => {
+                setSound(value => {
+                  localStorage.setItem("sound", !value)
+                  return !value
+                })
+              }}
+              className={`fas ${isSoundOn ? "fa-volume-up" : "fa-volume-mute"}`}
+            />
+            <Toggle
+              checked={theme === "dark"}
+              onChange={({ target }) => {
+                isSoundOn && clickSound.setVolume(0.1).play()
+                window.__setPreferedTheme(target.checked ? "dark" : "light")
+              }}
+            />
+          </div>
         )}
       </Header>
       <main style={{ minHeight: "100vh" }}>{children}</main>

@@ -5,23 +5,55 @@ body {
 }
 
 body.light {
-  --bg: #fff;
-  --bg-darker: rgb(219, 219, 219);
-  --text: #352833;
-  --headers: #0d1a3d;
-  --hyper: #202f58;
+  --bg: #f1e3cb;
+  --bg-darker: #581c0c;
+  --text: #581c0c;
+  --headers: #ca5116;
+  --hyper: #ca5116;
   --tag: #ff54a7;
   --tag-text: #fff;
   --slider: #ffcf0d;
 }
 
 body.dark {
-  --bg: #30374a;
-  --bg-darker: #242938;
+  --bg: #202040;
+  --bg-darker: #202060;
   --text: rgb(182, 192, 221);
-  --headers: #f4e6ad;
-  --hyper: #ff54a7;
+  --headers: #ff6363;
+  --hyper: #ff6363;
   --tag: #0d1a3d;
-  --slider: #30374a;
+  --slider: #202040;
   --moon: #f4e6ad;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+[data-reach-listbox-button] {
+  width: 100px;
+  border: 4px solid var(--hyper) !important;
+}
+
+[data-reach-listbox-popover] {
+  border: 4px solid var(--hyper);
+  border-top: 0px;
+}
+
+[data-reach-listbox-popover] {
+  background-color: var(--bg) !important;
+  border: 4px solid var(--hyper) !important;
+  border-top: 0px solid;
+  outline: none;
+}
+
+[data-reach-listbox-popover] > ul > li:hover {
+  background-color: var(--bg-darker) !important;
+  cursor: pointer;
+}
+
+[data-reach-listbox-arrow] {
+  font-size: 1.1em !important;
+  margin-left: 0.1em !important;
 }

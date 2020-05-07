@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location }) => {
   }
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title={siteTitle} />
       <Bio />
       <Select changeOrder={changeOrder} />
       {posts.map(({ node }) => {

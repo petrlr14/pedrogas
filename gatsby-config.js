@@ -6,7 +6,7 @@ module.exports = {
       summary: `Estudiante queriendo aprender todo, aveces sin lograr nada.`,
     },
     description: `Blog personal para expresar mis vivencias.`,
-    siteUrl: `http://pedrogas.me//`,
+    siteUrl: `https://pedrogas.me/`,
     social: {
       twitter: `petrlr14`,
     },

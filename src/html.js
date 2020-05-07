@@ -23,6 +23,8 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
+
+                //toggle dark theme
                 window.__onThemeChange = function(){}
                 function setTheme(theme){
                   window.__theme = theme;
