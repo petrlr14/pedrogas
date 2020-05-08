@@ -1,15 +1,55 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import { OrderContext } from "./../context/contexts"
+import OrderOptions from "./../utils/OrderOptions"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const { value } = useContext(OrderContext)
+
+  const renderLinks = () => {
+    let prev, nxt
+    if (value === OrderOptions.DESC) {
+      prev = next ? { ...next } : null
+      nxt = previous ? { ...previous } : null
+    } else {
+      prev = previous ? { ...previous } : null
+      nxt = next ? { ...next } : null
+    }
+    return (
+      <>
+        <li>
+          {prev && (
+            <Link
+              to={prev.fields.slug}
+              rel="prev"
+              style={{ textDecoration: "none" }}
+            >
+              ← {prev.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li>
+          {nxt && (
+            <Link
+              to={nxt.fields.slug}
+              rel="next"
+              style={{ textDecoration: "none" }}
+            >
+              {nxt.frontmatter.title} →
+            </Link>
+          )}
+        </li>
+      </>
+    )
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -60,28 +100,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             padding: 0,
           }}
         >
-          <li>
-            {previous && (
-              <Link
-                to={previous.fields.slug}
-                rel="prev"
-                style={{ textDecoration: "none" }}
-              >
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link
-                to={next.fields.slug}
-                rel="next"
-                style={{ textDecoration: "none" }}
-              >
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
+          {renderLinks()}
         </ul>
       </nav>
     </Layout>

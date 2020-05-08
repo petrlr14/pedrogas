@@ -1,23 +1,24 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import OrderOptions from "./../utils/OrderOptions"
 import { Listbox, ListboxOption, ListboxArrow } from "@reach/listbox"
 import "@reach/listbox/styles.css"
 import VisuallyHidden from "@reach/visually-hidden"
+import { OrderContext } from "./../context/contexts"
 
 const options = {
-  newest: { value: OrderOptions.ASC, name: "Nuevos" },
-  oldest: { value: OrderOptions.DESC, name: "Viejo" },
+  DESC: { value: OrderOptions.ASC, name: "Recientes" },
+  ASC: { value: OrderOptions.DESC, name: "Antiguos" },
 }
 
 export const Select = ({ changeOrder }) => {
-  const [selectedItem, setSelectedItem] = useState("newest")
+  const { value, toggle } = useContext(OrderContext)
   return (
     <>
       <VisuallyHidden>Selecciona orden de posts</VisuallyHidden>
       <Listbox
-        value={selectedItem}
+        value={value}
         onChange={value => {
-          setSelectedItem(value)
+          toggle(value)
           changeOrder(options[value].value)
         }}
         className="list"

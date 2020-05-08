@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
@@ -11,7 +11,6 @@ import OrderOptions from "./../utils/OrderOptions"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const [posts, setPost] = useState(data.allMarkdownRemark.edges)
-
   const changeOrder = value => {
     const postsSorted = posts.sort((a, b) => {
       switch (value) {

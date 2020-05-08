@@ -33,7 +33,7 @@ body.dark {
 }
 
 [data-reach-listbox-button] {
-  width: 100px;
+  width: 120px;
   border: 4px solid var(--hyper) !important;
 }
 
