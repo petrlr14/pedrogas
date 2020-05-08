@@ -1,4 +1,9 @@
 const React = require("react")
+const App = require("./src/App").App
+
+exports.wrapRootElement = ({ element }) => {
+  return <App>{element}</App>
+}
 
 exports.onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents([

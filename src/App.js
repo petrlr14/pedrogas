@@ -17,19 +17,21 @@ export const App = ({ children }) => {
   }
 
   return (
-    <Provider
-      value={{
-        value,
-        toggle: changeOrder,
-      }}
-    >
+    <>
       <Helmet>
         <script
           src="https://kit.fontawesome.com/248332ce05.js"
           crossorigin="anonymous"
         />
       </Helmet>
-      {children}
-    </Provider>
+      <Provider
+        value={{
+          value,
+          toggle: changeOrder,
+        }}
+      >
+        {children}
+      </Provider>
+    </>
   )
 }
