@@ -20,13 +20,13 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
               window.__onThemeChange(theme);
             }
             
-            let preferedTheme;
+            let preferredTheme;
             
             try{
-              preferedTheme = localStorage.getItem('theme')
+              preferredTheme = localStorage.getItem('theme')
             }catch(e){}
 
-            window.__setPreferedTheme = function(theme){
+            window.__setPreferredTheme = function(theme){
               setTheme(theme)
               localStorage.setItem('theme', theme)
             }
@@ -36,7 +36,7 @@ exports.onRenderBody = ({ setPreBodyComponents }) => {
               window.__setPreferredTheme(e.matches ? 'light' : 'dark')
             });
 
-            setTheme(preferedTheme || (darkQuery.matches ? 'light' : 'dark'))
+            setTheme(preferredTheme || (darkQuery.matches ? 'light' : 'dark'))
           })();
         `,
       },

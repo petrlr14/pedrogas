@@ -8,9 +8,9 @@ body.light {
   --bg: #f1e3cb;
   --bg-darker: #581c0c;
   --text: #581c0c;
-  --headers: #ca5116;
-  --hyper: #ca5116;
-  --tag: #ca5116;
+  --headers: #85360f;
+  --hyper: #85360f;
+  --tag: #85360f;
   --tag-text: #fff;
   --slider: #ffcf0d;
 }
@@ -22,7 +22,7 @@ body.dark {
   --headers: #ff6363;
   --hyper: #ff6363;
   --tag: #ff6363;
-  --tag-text: #fff;
+  --tag-text: #000;
   --slider: #202040;
   --moon: #f4e6ad;
 }

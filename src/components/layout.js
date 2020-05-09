@@ -5,13 +5,24 @@ import { rhythm, scale } from "../utils/typography"
 import { Toggle } from "./toggle"
 
 const socials = [
-  { name: "twitter", href: "https://twitter.com/petrlr14", icon: "fa-twitter" },
+  {
+    name: "twitter",
+    href: "https://twitter.com/petrlr14",
+    icon: "fa-twitter",
+    text: "Link to Pedro Gomez twitter account ",
+  },
   {
     name: "instagram",
     href: "https://twitter.com/petrlr14",
     icon: "fa-instagram",
+    text: "Link to Pedro Gomez instagram account ",
   },
-  { name: "github", href: "https://github.com/petrlr14", icon: "fa-github" },
+  {
+    name: "github",
+    href: "https://github.com/petrlr14",
+    icon: "fa-github",
+    text: "Link to Pedro Gomez github account ",
+  },
 ]
 
 const A = styled.a`
@@ -114,9 +125,9 @@ const Layout = ({ location, title, children }) => {
       </Header>
       <main style={{ minHeight: "100vh" }}>{children}</main>
       <footer style={{ display: "flex", justifyContent: "center" }}>
-        {socials.map(({ name, href, icon }) => {
+        {socials.map(({ name, href, icon, text }) => {
           return (
-            <A target="_blank" href={href} key={name}>
+            <A target="_blank" href={href} key={name} aria-label={text}>
               <i className={`fab ${icon}`} />
             </A>
           )
