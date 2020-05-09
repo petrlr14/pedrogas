@@ -118,7 +118,7 @@ const Layout = ({ location, title, children }) => {
           <Toggle
             checked={theme === "dark"}
             onChange={({ target }) => {
-              window.__setPreferedTheme(target.checked ? "dark" : "light")
+              window.__setPreferredTheme(target.checked ? "dark" : "light")
             }}
           />
         )}
