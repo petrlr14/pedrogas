@@ -13,6 +13,7 @@ body.light {
   --tag: #85360f;
   --tag-text: #fff;
   --slider: #ffcf0d;
+  --code-text: #581c0c;
 }
 
 body.dark {
@@ -25,6 +26,13 @@ body.dark {
   --tag-text: #000;
   --slider: #202040;
   --moon: #f4e6ad;
+  --code-text: white;
+}
+
+code {
+  background-color: var(--bg) !important;
+  color: var(--code-text) !important;
+  font-weight: bold;
 }
 
 .list {
