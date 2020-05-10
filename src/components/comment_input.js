@@ -17,7 +17,10 @@ export const CommentInput = ({ id }) => {
         comment,
         date: new Date().toISOString(),
       })
-      .then(() => {})
+      .then(() => {
+        setUsername("")
+        setComment("")
+      })
   }
 
   return (
