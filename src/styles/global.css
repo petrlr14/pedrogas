@@ -14,6 +14,8 @@ body.light {
   --tag-text: #fff;
   --slider: #ffcf0d;
   --code-text: #581c0c;
+  --button-hover-color: var(--bg);
+  --button-disabled: #85360e73;
 }
 
 body.dark {
@@ -27,6 +29,8 @@ body.dark {
   --slider: #202040;
   --moon: #f4e6ad;
   --code-text: white;
+  --button-hover-color: #000000;
+  --button-disabled: #ff636352;
 }
 
 code {

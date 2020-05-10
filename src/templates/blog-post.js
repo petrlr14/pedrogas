@@ -7,6 +7,8 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import { OrderContext } from "./../context/contexts"
 import OrderOptions from "./../utils/OrderOptions"
+import { CommentInput } from "../components/comment_input"
+import { Comments } from "../components/comment"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -50,7 +52,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       </>
     )
   }
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -87,6 +88,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         <footer>
           <Bio />
+          <CommentInput id={post.id} />
+          <Comments id={post.id} />
         </footer>
       </article>
 

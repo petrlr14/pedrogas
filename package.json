@@ -10,6 +10,7 @@
   "dependencies": {
     "@reach/listbox": "^0.10.1",
     "@reach/visually-hidden": "^0.10.1",
+    "firebase": "^7.14.3",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-feed": "^2.4.3",
@@ -39,6 +40,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "gh-pages": "^2.2.0",
     "prettier": "2.0.4"
   },
@@ -54,7 +56,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "GATSBY_ENV=development gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
