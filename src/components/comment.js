@@ -44,9 +44,9 @@ const Comment = ({ username, date, comment }) => {
 }
 
 export const Comments = ({ id }) => {
-  /* const firebase = useFirebase() */
+  const firebase = useFirebase()
   const [comments, setComments] = useState(null)
-  /* useEffect(() => {
+  useEffect(() => {
     if (!firebase) return
     firebase
       .database()
@@ -68,7 +68,7 @@ export const Comments = ({ id }) => {
         }
         setComments(comm)
       })
-  }, [firebase, id]) */
+  }, [firebase, id])
   return (
     <>
       <h2>Comentarios</h2>

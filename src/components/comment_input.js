@@ -4,7 +4,7 @@ import { Avatar, Grid } from "./containers"
 import useFirebase from "../services/useFirebase"
 
 export const CommentInput = ({ id }) => {
-  /* const firebase = useFirebase() */
+  const firebase = useFirebase()
   const [username, setUsername] = useState("")
   const [comment, setComment] = useState("")
 
