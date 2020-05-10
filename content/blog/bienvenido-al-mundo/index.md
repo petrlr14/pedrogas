@@ -1,11 +1,11 @@
 ---
-title: Bievenido al mundo
+title: Bienvenido al mundo
 date: "2020-04-21T15:48:39.593Z"
 description: "La odisea para crear mi propio blog."
 tags: "story,react,gatsby"
 ---
 
-![Wasting time image](./wasting_time.jpg)
+![A boy wasting time in front of a computer ](./wasting_time.jpg)
 _Sobrepensar todo te lleva, muchas veces, a no hacer nada._
 
 Como toda idea, este blog empezó como un impulso de querer recrear lo que personajes que sigo en la industria han hecho. En este caso le tocó a [Dan Abramov](https://twitter.com/dan_abramov) ser mi fuente de inspiración con su blog [Overreacted](https://overreacted.io/) (en retrospectiva, quizá demasiada inspiración). A continuación relataré el proceso por el que pasé hasta llegar a este producto final (?).
