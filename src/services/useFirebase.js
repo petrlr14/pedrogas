@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import getInstance from "./firebase"
 
 export default function useFirebase() {

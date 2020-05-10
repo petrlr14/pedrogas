@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import styled from "styled-components"
 import { Input, InputGroup, Label, Span, TextArea, Button } from "./forms"
 import { Avatar, Grid } from "./containers"
 import useFirebase from "../services/useFirebase"
@@ -27,7 +26,7 @@ export const CommentInput = ({ id }) => {
       <Grid>
         <Avatar src={`https://api.adorable.io/avatars/50/${username}.png`} />
         <InputGroup>
-          <Label width="30%">
+          <Label width="200px">
             <Input
               value={username}
               onChange={({ target }) => {

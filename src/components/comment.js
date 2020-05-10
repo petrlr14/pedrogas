@@ -68,7 +68,7 @@ export const Comments = ({ id }) => {
         }
         setComments(comm)
       })
-  }, [firebase])
+  }, [firebase, id])
   return (
     <>
       <h2>Comentarios</h2>
