@@ -27,7 +27,12 @@ const Container = styled(Grid)`
 const Comment = ({ username, date, comment }) => {
   return (
     <Container>
-      <Avatar src={`https://api.adorable.io/avatars/50/${username}.png`} />
+      <Avatar
+        src={`https://avatars.dicebear.com/v2/bottts/${username}.svg`}
+        alt={
+          "Generated avatar from avatars.dicebear.com, it's meant to look like a robot"
+        }
+      />
       <Text>
         <h5>{username}</h5>
         <small>

@@ -47,17 +47,28 @@ export const TextArea = styled.textarea`
 `
 
 export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   border: 4px solid var(--hyper);
   background-color: var(--bg);
   color: var(--text);
   cursor: pointer;
   width: ${props => props.width || "100px"};
-  &:disabled {
-    border-color: var(--button-disabled);
-  }
+  border-radius: 3px;
   &:hover {
     background-color: var(--hyper);
     color: var(--button-hover-color);
     font-weight: bold;
+  }
+  &:disabled {
+    border-color: var(--button-disabled);
+    color: var(--text-disabled);
+    &:hover {
+      background-color: var(--bg);
+      color: var(--text-disabled);
+      font-weight: normal;
+      cursor: not-allowed;
+    }
   }
 `

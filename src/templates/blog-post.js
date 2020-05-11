@@ -73,7 +73,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               ...scale(-1 / 5),
               display: `block`,
               marginBottom: rhythm(1),
-              color: `var(--hyper)`,
             }}
           >
             {post.frontmatter.date}

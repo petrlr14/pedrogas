@@ -27,7 +27,12 @@ export const CommentInput = ({ id }) => {
     <>
       <h2>Deja un comentario</h2>
       <Grid>
-        <Avatar src={`https://api.adorable.io/avatars/50/${username}.png`} />
+        <Avatar
+          src={`https://avatars.dicebear.com/v2/bottts/${username}.svg`}
+          alt={
+            "Generated avatar from avatars.dicebear.com, it's meant to look like a robot"
+          }
+        />
         <InputGroup>
           <Label width="200px">
             <Input
@@ -45,7 +50,7 @@ export const CommentInput = ({ id }) => {
                 setComment(target.value)
               }}
             />
-            <Span id="username">Comentario</Span>
+            <Span id="comment">Comentario</Span>
           </Label>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <Button
@@ -53,6 +58,7 @@ export const CommentInput = ({ id }) => {
               onClick={saveComment}
             >
               Enviar
+              <i className="fas fa-paper-plane" />
             </Button>
           </div>
         </InputGroup>
