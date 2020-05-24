@@ -2,7 +2,7 @@
 title: Bienvenido al mundo
 date: "2020-04-21T15:48:39.593Z"
 description: "La odisea para crear mi propio blog."
-tags: "story,react,gatsby"
+tags: "historia,react,gatsby"
 ---
 
 ![A boy wasting time in front of a computer ](./wasting_time.jpg)
