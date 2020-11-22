@@ -8,6 +8,7 @@ module.exports = {
     author: {
       name: `Pedro Gómez`,
       summary: `Estudiante queriendo aprender todo, aveces sin lograr nada.`,
+      image: `assets/profile-pic.jpeg`,
     },
     description: `Blog personal para expresar mis vivencias.`,
     siteUrl: `https://pedrogas.me/`,

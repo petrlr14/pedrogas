@@ -17,6 +17,8 @@ body.light {
   --button-hover-color: var(--bg);
   --button-disabled: #132f6375;
   --text-disabled: #132f637d;
+  --loader: #0a0b3380;
+  --loader-hype: #0a0b33;
 }
 
 body.dark {
@@ -33,6 +35,8 @@ body.dark {
   --button-hover-color: #000000;
   --button-disabled: #ff636352;
   --text-disabled: #b6c0dd8c;
+  --loader: #ffcf0d80;
+  --loader-hype: #ffcf0d;
 }
 
 code {

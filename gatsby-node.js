@@ -19,6 +19,9 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                image {
+                  relativePath
+                }
               }
             }
           }
@@ -26,7 +29,6 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `
   )
-
   if (result.errors) {
     throw result.errors
   }
@@ -43,6 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
       component: blogPost,
       context: {
         slug: post.node.fields.slug,
+        image: post.node.frontmatter.image.relativePath,
         previous,
         next,
       },

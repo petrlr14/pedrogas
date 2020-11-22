@@ -10,7 +10,7 @@ import OrderOptions from "./../utils/OrderOptions"
 import { CommentInput } from "../components/comment_input"
 import { Comments } from "../components/comment"
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, pageContext, location, ...rest }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
@@ -57,6 +57,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        image={rest.pathContext.image}
       />
       <article>
         <header style={{ color: `var(--headers)` }}>
