@@ -57,7 +57,7 @@ const BlogPostTemplate = ({ data, pageContext, location, ...rest }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={rest.pathContext.image}
+        image={pageContext.image}
       />
       <article>
         <header style={{ color: `var(--headers)` }}>
