@@ -3,6 +3,7 @@ title: Acceso a todos
 date: "2020-05-09T21:14:17.321Z"
 description: "Un descubrimiento que no es nuevo pero como que lo es."
 tags: "web"
+image: "accessibility.jpeg"
 ---
 
 ![Accessibility icon with light blue background and a person in the middle](./accessibility.jpeg)

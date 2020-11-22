@@ -3,6 +3,7 @@ title: Mi problema con los side projects
 date: "2020-05-24T05:05:31.774Z"
 description: "Tener un objetivo claro lo es todo. ¿Qué pasa si no lo tengo?"
 tags: "pensamientos"
+image: "holgazan.png"
 ---
 
 ![Homero Simpson sentado en un sillón, en calzones ](./holgazan.png)

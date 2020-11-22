@@ -3,6 +3,7 @@ title: Vivimos en un mundo simulado
 date: "2020-05-07T16:16:41.882Z"
 description: "#&,1*(@!><w)."
 tags: "historia,matemáticas"
+image: "simulation.jpg"
 ---
 
 ![Computer simulation mesh ](./simulation.jpg)
