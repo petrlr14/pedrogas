@@ -57,6 +57,10 @@ const SEO = props => {
           content: `website`,
         },
         {
+          name: `og:image`,
+          content: image || site.siteMetadata.author.image,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
